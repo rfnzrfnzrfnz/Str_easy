@@ -1,9 +1,10 @@
 def ft_percent_lower_uppercase(str):
-    up = 0
-    low = 0
+    l = 0
+    u = 0
     for i in str:
-        if i == i.upper():
-            up += 1
-        else:
-            low += 1
-    return low / up
+        if i >= "a" and i <= "c" or i >= "а" and i <= "я":
+            l += 1
+        elif i >= "A" and i <= "C" or i >= "А" and i <= "Я":
+            u += 1
+    return int(l / u)
+
