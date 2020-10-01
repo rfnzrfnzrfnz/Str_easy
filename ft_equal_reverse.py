@@ -1,22 +1,30 @@
-def ft_len(a):
-    b = 0
-    for i in a:
-        b += 1
+def ft_len(str):
+    c = 0
+    for i in str:
+        c += 1
+    return c
 
-    return b
+
+def ft_reverse_str(str):
+    l = ft_len(str)
+    r = ""
+    for i in range(l - 1, -1, -1):
+        r = r + str[i]
+    return r
 
 
-def ft_equal_reverse(c):
-    z = ft_len(c)
-    i = 0
-    z = z - 1
-    k = 0
-    while z - i >= i:
-        if c[z - i] == c[i]:
-            i += 1
-        else:
-            k = 1
-            break
-    if k == 1:
-        return False
-    return True
+def ft_equal_reverse(str):
+    l = ft_len(str)
+    p = ""
+    v = ""
+    if l % 2 == 0:
+        for i in range(l // 2):
+            p += str[i]
+        for i in range(l // 2, l):
+            v += str[i]
+    else:
+        for i in range(l // 2):
+            p += str[i]
+        for i in range(l // 2 + 1, l):
+            v += str[i]
+    return p == ft_reverse_str(v)
