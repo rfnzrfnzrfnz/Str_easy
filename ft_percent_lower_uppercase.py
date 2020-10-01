@@ -7,4 +7,3 @@ def ft_percent_lower_uppercase(str):
         elif i >= "A" and i <= "C" or i >= "А" and i <= "Я":
             u += 1
     return int(l / u)
-
