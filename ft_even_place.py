@@ -9,6 +9,6 @@ def ft_len(a):
 def ft_even_place(a):
     c = str()
     for i in range(ft_len(a)):
-        if i % 1 == 1:
+        if i % 2 == 1:
             c += a[i]
     return c
